@@ -66,3 +66,12 @@ function dequeue(){
 const dequeued =dequeue();
 console.log(dequeued);
 console.log(queue);
+
+function sayGoodNight(name){
+    console.log(`Hi ${name}! Good Night `);
+}
+
+const timer = setTimeout(()=>{
+    sayGoodNight('Pranjal')
+},1000)
+
