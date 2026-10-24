@@ -24,10 +24,11 @@ function isQueueEmpty() {
 
 let queue=[];
 
-let rear = front = -1;
+let rear = -1;
+let front =-1;
 
 function isQueueEmpty(){
-    if(front == rear == -1){
+    if(front ==-1 & rear == -1){
         console.log('Queue is Empty')
         return true;
     }
@@ -38,8 +39,9 @@ function isQueueEmpty(){
 
 
 function enqueue(value){
-    if (isQueueEmpty){
-        front = rear +=1;
+    if (isQueueEmpty()){
+        front = front+1;
+        rear =rear+1;
         queue[rear]=value;
     }
     else{
@@ -57,21 +59,25 @@ function dequeue(){
         console.log('Already Empty');
     }
     else{
-        let dequeued = queue[rear];
-        queue.splice(rear,1);
-        rear-=1;
+        let dequeued = queue[front];
+        front = front +1;
         return dequeued;
     }
 }
 const dequeued =dequeue();
-console.log(dequeued);
-console.log(queue);
+console.log();
+
+function displayQueue(){  
+    for(i=front;i<=rear;i++){
+        queue=[...queue[i]];
+    }
+    console.log(queue)
+}
+displayQueue(queue);
 
 function sayGoodNight(name){
     console.log(`Hi ${name}! Good Night `);
 }
-
 const timer = setTimeout(()=>{
     sayGoodNight('Pranjal')
 },1000)
-

@@ -20,37 +20,40 @@ Rules:
  */
 
 //Task1
-let arr = [10, 20, 30, 40, 50];
+let nums = [10, 20, 30, 40, 50];
+const even = nums.filter(nums => nums%2==0);
+const even_doubled =even.map(even => even*2);
+console.log(even_doubled);
 
-function getElement(n){
-    return arr[n]
-}
-console.log(getElement(2));
+// function getElement(n){
+//     return arr[n]
+// }
+// console.log(getElement(2));
 
-//Task2
-function insertElement(n,p){
-let i= arr.length -1;
-            for (i; i>= n;i--){
-                arr[i+1]=arr[i];
-            }
-        arr[n]=p;
-        return arr;
-}
-console.log(insertElement(2,4))
+// //Task2
+// function insertElement(n,p){
+// let i= arr.length -1;
+//             for (i; i>= n;i--){
+//                 arr[i+1]=arr[i];
+//             }
+//         arr[n]=p;
+//         return arr;
+// }
+// console.log(insertElement(2,4))
 
-//Task3
-function updateElement(n,p){
-    arr[n]=p;
-    return arr;
-} 
-console.log(updateElement(2,99));
+// //Task3
+// function updateElement(n,p){
+//     arr[n]=p;
+//     return arr;
+// } 
+// console.log(updateElement(2,99));
 
-//Task4
-function deleteElement(n){
-    let i=n;
-    for(i;i<arr.length;i++){
-        arr[i]=arr[i+1]
-    }
-    return arr;
-}
-console.log(deleteElement(1))
+// //Task4
+// function deleteElement(n){
+//     let i=n;
+//     for(i;i<arr.length;i++){
+//         arr[i]=arr[i+1]
+//     }
+//     return arr;
+// }
+// console.log(deleteElement(1))
